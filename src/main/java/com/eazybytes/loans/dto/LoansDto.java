@@ -17,7 +17,7 @@ public class LoansDto {
 	private String mobileNumber;
 
 	@NotEmpty(message = "Loan Number can not be a null or empty")
-	@Pattern(regexp = "(^$|[0-9]{12})", message = "LoanNumber must be 12 digits")
+//	@Pattern(regexp = "(^$|[0-9]{12})", message = "LoanNumber must be 12 digits")
 	@Schema(description = "Loan Number of the customer", example = "548732457654")
 	private String loanNumber;
 
