@@ -29,6 +29,7 @@ public class LoansServiceImpl implements ILoansService {
 	public void createLoan(String mobileNumber) {
 		Optional<Loans> optionalLoans = loansRepository.findByMobileNumber(mobileNumber);
 		if (optionalLoans.isPresent()) {
+			//checking if exist or not , if exist throwing business exception 
 			throw new LoanAlreadyExistsException("Loan already registered with given mobileNumber " + mobileNumber);
 
 		}
