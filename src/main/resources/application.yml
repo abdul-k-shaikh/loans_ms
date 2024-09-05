@@ -21,10 +21,19 @@ spring:
   profiles:
     active: "prod"
 
+eureka: 
+   instance: 
+     prefer-ip-address: true
+   client: 
+     fetch-registry: true
+     register-with-eureka: true
+     service-url: 
+       defaultZone: http://localhost:8070/eureka/
+
 info: 
   app: 
     name:"cards" 
-    description:"Eazy Bank Cards Application"
+    description:"Eazy Bank loans Application"
     version:"1.0.0"
     
 build.version: 3.0
@@ -40,4 +49,10 @@ management:
 
 endpoints: 
    shutdown: 
-      enabled: true 
+      enabled: true
+
+logging: 
+ level: 
+  com: 
+   eazybytes: 
+    loans: DEBUG
